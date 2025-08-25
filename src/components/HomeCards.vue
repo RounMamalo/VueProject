@@ -1,7 +1,9 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-
+import { ref } from 'vue';
+const mern = ref('2')
 </script>
+
 <template>
     <section class="py-4">
       <div class="container-xl lg:container m-auto">
@@ -23,12 +25,12 @@ import { RouterLink } from 'vue-router';
             <p class="mt-2 mb-4">
               List your job to find the perfect developer for the role
             </p>
-            <a
-              href="add-job.html"
+            <RouterLink
+              to="/jobs/add"
               class="inline-block bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600"
             >
               Add Job
-            </a>
+            </RouterLink>
           </div>
         </div>
       </div>
